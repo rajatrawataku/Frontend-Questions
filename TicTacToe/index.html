@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<style>
+			td {
+				height: 10px;
+				width: 10px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<table>
+				<tbody data-component="tic-tac-toe" data-size="3" data-player="X"></tbody>
+			</table>
+
+			<template data-template-for="tic-tac-toe" data-id-value="tableRow">
+				<tr></tr>
+			</template>
+
+			<template data-template-for="tic-tac-toe" data-id-value="tableCell">
+				<td data-x="" data-y=""></td>
+			</template>
+
+			<template data-template-for="tic-tac-toe" data-id-value="gameStatus">
+				<span></span>
+			</template>
+
+			<button data-btn-for="tic-tac-toe" data-action="retry">Retry</button>
+		</main>
+	</body>
+	<script src="./index.js"></script>
+</html>
