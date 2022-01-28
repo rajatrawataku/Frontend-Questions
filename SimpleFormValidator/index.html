@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<style>
+			.main-ctn {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.form-ctn {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+			}
+
+			.label-ctn {
+				margin: 10px 0;
+			}
+
+			.form-fied {
+				margin-left: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<div class="main-ctn">
+				<h3>Please provide your basis details</h3>
+				<form data-component="simpleFormComponent" class="form-ctn"></form>
+			</div>
+			<template data-component-for="simpleFormComponent" data-id-value="label">
+				<label class="label-ctn"> </label>
+			</template>
+
+			<template data-component-for="simpleFormComponent" data-id-value="input">
+				<input class="form-fied" />
+			</template>
+			<template data-component-for="simpleFormComponent" data-id-value="options">
+				<option></option>
+			</template>
+
+			<template data-component-for="simpleFormComponent" data-id-value="select">
+				<select class="form-fied"></select>
+			</template>
+			<template data-component-for="simpleFormComponent" data-id-value="button">
+				<button class="label-ctn" type="submit">Submit</button>
+			</template>
+		</main>
+	</body>
+	<script src="./index.js"></script>
+</html>
