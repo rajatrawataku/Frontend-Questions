@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Basic Table</title>
+		<style>
+			.table-row {
+				padding: 4px;
+				border: 1px solid black;
+			}
+
+			table {
+				border: 1px solid black;
+				padding: 2px;
+			}
+		</style>
+	</head>
+	<main>
+		<body>
+			<table data-component="SimpleTable">
+				<template data-component-for="SimpleTable" data-id="tableHead">
+					<thead></thead>
+				</template>
+				<template data-component-for="SimpleTable" data-id="tableBody">
+					<tbody></tbody>
+				</template>
+				<template data-component-for="SimpleTable" data-id="tableRow">
+					<tr></tr>
+				</template>
+				<template data-component-for="SimpleTable" data-id="tableData">
+					<td class="table-row"></td>
+				</template>
+			</table>
+		</body>
+		<script src="./index.js"></script>
+	</main>
+</html>

@@ -1,0 +1,117 @@
+<html>
+	<head>
+		<title>Shopping Card</title>
+		<style>
+			li {
+				height: 300px;
+			}
+
+			.main-ctn {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.shopping-ctn {
+				display: flex;
+				align-items: flex-start;
+				justify-content: space-between;
+			}
+
+			.cart-ctn {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				border: 1px solid black;
+				max-height: 200px;
+				min-width: 200px;
+				overflow-y: scroll;
+				position: sticky;
+				top: 0;
+			}
+
+			.cart-summary {
+				display: flex;
+				flex-direction: column;
+				position: sticky;
+				bottom: 0;
+				background-color: white;
+			}
+
+			.center-text {
+				text-align: center;
+			}
+
+			.cart-item-ctn {
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main-ctn">
+			<nav class="nav-ctn">
+				<a href="/home">Home</a>
+				<a href="/article">Article</a>
+				<a href="/about">About</a>
+				<a href="/contactUs">Contact Us</a>
+			</nav>
+
+			<div class="shopping-ctn">
+				<div class="product-ctn">
+					<h1>Welcome to Fruit Store</h1>
+					<ul class="product-list-ctn" data-component="shopping-mall"></ul>
+					<template data-component-for="product-card" data-id="list-item">
+						<li></li>
+					</template>
+					<template data-component-for="product-card" data-id="image">
+						<img height="50px" width="50px" />
+					</template>
+					<template data-component-for="product-card" data-id="product-content-ctn">
+						<div></div>
+					</template>
+					<template data-component-for="product-card" data-id="product-name">
+						<span></span>
+					</template>
+					<template data-component-for="product-card" data-id="product-price">
+						<span></span>
+					</template>
+					<template data-component-for="product-card" data-id="add-to-cart-btn">
+						<button>Add to cart</button>
+					</template>
+				</div>
+				<div class="cart-ctn">
+					<h2 class="center-text">Cart</h2>
+					<div class="cart-item-ctn">
+						<table data-component="cart"></table>
+						<template data-component-for="cart" data-id="tableRow">
+							<tr></tr>
+						</template>
+						<template data-component-for="cart" data-id="tableData">
+							<td></td>
+						</template>
+						<template data-component-for="cart" data-id="tableBody">
+							<tbody></tbody>
+						</template>
+						<template data-component-for="cart" data-id="text">
+							<span></span>
+						</template>
+						<template data-component-for="cart" data-id="quantity">
+							<div></div>
+						</template>
+						<template data-component-for="cart" data-id="crossBtn">
+							<button>X</button>
+						</template>
+					</div>
+					<div class="cart-summary">
+						<template data-component-for="cart" data-id="total-items">
+							<span class="center-text"> </span>
+						</template>
+						<template data-component-for="cart" data-id="checkout-btn">
+							<button class="center-text">Checkout</button>
+						</template>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="./index.js"></script>
+</html>

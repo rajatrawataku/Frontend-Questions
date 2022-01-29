@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<style>
+			.main-bar {
+				box-shadow: none;
+				border: none;
+				padding: 0px;
+				background-color: skyBlue;
+				width: 200px;
+				height: 40px;
+				border-radius: 4px;
+				position: relative;
+				color: white;
+			}
+
+			.loader-bar {
+				background-color: darkblue;
+				width: 0%;
+				height: 100%;
+				transition: all 0.3s;
+				border-radius: 4px;
+				color: white;
+				text-align: left;
+			}
+
+			.loading-text {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		</style>
+	</head>
+	<body>
+		<button class="main-bar" data-component="ProgressButton">
+			<template data-component-for="ProgressButton" data-id="loadingText">
+				<span class="loading-text"></span>
+			</template>
+			<template data-component-for="ProgressButton" data-id="loaderBar">
+				<div class="loader-bar"></div>
+			</template>
+			<template data-component-for="ProgressButton" data-id="loading-pecentage">
+				<span class="loading-percentage"></span>
+			</template>
+		</button>
+		<script src="./index.js"></script>
+	</body>
+</html>
