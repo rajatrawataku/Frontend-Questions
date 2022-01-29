@@ -18,15 +18,21 @@ class ProgressButton {
 			this.templates[template.dataset.id] = template;
 		});
 
-		this.shouldAddorDeleteEventListener(this.node, 'click', this.startLoader, true);
+		this.initialiseLoader();
 		this.render();
 	}
+
+	initialiseLoader = () => {
+		this.state.loaderStatus = 'NOT_STARTED';
+		this.state.currentCounter = 0;
+		this.shouldAddorDeleteEventListener(this.node, 'click', this.startLoader, true);
+	};
 
 	shouldAddorDeleteEventListener = (node, eventType, eventHandler, shouldAdd) => {
 		if (shouldAdd) {
 			node.addEventListener(eventType, eventHandler);
 		} else {
-			node.removeEventListener(eventType, eventHandlers);
+			node.removeEventListener(eventType, eventHandler);
 		}
 	};
 
@@ -47,6 +53,7 @@ class ProgressButton {
 		this.state.currentCounter++;
 		if (this.state.currentCounter === 100) {
 			this.state.loaderStatus = 'COMPLETED';
+			this.shouldAddorDeleteEventListener(this.node, 'click', this.startLoader, false);
 		} else {
 			setTimeout(() => {
 				this.incrementLoader();
