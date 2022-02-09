@@ -1,22 +1,24 @@
 function throttle(func, wait) {
-	timerId = null;
+	waiting = false;
 	lastArgs = null;
 
-	return function () {
-		if (timerId) {
-			lastArgs = arguments;
+	return function (...args) {
+		if (!waiting) {
+			waiting = true;
+			func.apply(this, args);
+			const timerFunction = () => {
+				setTimeout(() => {
+					waiting = false;
+					if (lastArgs) {
+						waiting = true;
+						func.apply(this, args);
+						timerFunction();
+					}
+				}, wait);
+			};
+			timerFunction();
 		} else {
-			func.call(this, ...arguments);
-
-			timerId = setTimeout(() => {
-				if (lastArgs) {
-					func.call(this, ...lastArgs);
-				}
-
-				lastArgs = null;
-
-				timerId = null;
-			}, wait);
+			lastArgs = args;
 		}
 	};
 }
