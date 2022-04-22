@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Excel Sheet</title>
+		<link href="./index.css" rel="stylesheet" />
+	</head>
+	<body>
+		<template data-component-for="excel-sheet" data-id="table-body">
+			<tbody></tbody>
+		</template>
+		<template data-component-for="excel-sheet" data-id="table-head">
+			<th class="table-head"></th>
+		</template>
+		<template data-component-for="excel-sheet" data-id="table-row">
+			<tr></tr>
+		</template>
+		<template data-component-for="excel-sheet" data-id="table-data">
+			<td class="table-data"></td>
+		</template>
+		<template data-component-for="excel-ceel" data-id="input-field">
+			<input />
+		</template>
+		<template data-component-for="excel-sheet" data-id="delete-btn">
+			<button class="delete">Delete</button>
+		</template>
+
+		<table data-component="excel-sheet"></table>
+		<script src="./index.js"></script>
+	</body>
+</html>

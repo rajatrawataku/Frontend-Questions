@@ -1,0 +1,14 @@
+.field {
+	position: relative;
+	height: 200px;
+	width: 500px;
+	border-bottom: 2px solid red;
+}
+
+.ball {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	background-color: red;
+}

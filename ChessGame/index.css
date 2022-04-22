@@ -1,0 +1,25 @@
+.chess-ctn {
+	display: inline-block;
+	border: 2px solid black;
+}
+
+.cell {
+	height: 40px;
+	width: 40px;
+}
+
+.white-cell {
+	background-color: white;
+}
+
+.black-cell {
+	background-color: black;
+}
+
+.seleceted-cell {
+	background-color: red;
+}
+
+.row {
+	display: flex;
+}

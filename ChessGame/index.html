@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<link rel="stylesheet" href="./index.css" />
+	<body>
+		<div class="chess-ctn" data-rows="9" data-columns="9" data-component="chess-board"></div>
+		<template data-component-for="chess-board" data-id="cell-id">
+			<div class="cell"></div>
+		</template>
+		<template data-component-for="chess-board" data-id="cell-row">
+			<div class="row"></div>
+		</template>
+	</body>
+	<script src="./index.js"></script>
+</html>

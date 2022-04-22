@@ -1,0 +1,49 @@
+table {
+	border-collapse: collapse;
+}
+
+.table-cell {
+	color: black;
+	background-color: white;
+	border: none;
+	outline: none;
+	text-align: center;
+}
+
+.table-cell:focus {
+	outline: 2px solid skyblue;
+}
+
+.table-data {
+	height: 20px;
+	width: 100px;
+	border: 1px solid #eee;
+	text-align: center;
+	position: relative;
+}
+
+.table-head {
+	height: 20px;
+	width: 100px;
+	border: 1px solid #eee;
+	position: relative;
+}
+
+.delete {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	background-color: rgba(200, 200, 200, 0.5);
+	border: none;
+	outline: none;
+}
+
+.table-head:hover > .delete {
+	display: block;
+}
+
+.table-data:hover > .delete {
+	display: block;
+}

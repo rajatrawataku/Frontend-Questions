@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./index.css" />
+	</head>
+	<body>
+		<h3 class="current-score">0</h3>
+		<table class="spotter-ctn" data-size="4" data-component="color-spotter" />
+		<template data-id="cell" data-component-for="color-spotter">
+			<td class="cell"></td>
+		</template>
+		<template data-id="row" data-component-for="color-spotter">
+			<tr class="row"></tr>
+		</template>
+		<template data-id="body" data-component-for="color-spotter">
+			<tbody class="body"></tbody>
+		</template>
+	</body>
+	<script src="./index.js"></script>
+</html>
